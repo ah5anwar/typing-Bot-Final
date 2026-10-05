@@ -1,0 +1,7 @@
+# Only download.php can be accessed directly
+<FilesMatch "^download\.php$">
+    Allow from all
+</FilesMatch>
+<FilesMatch "^(?!download\.php$)">
+    Deny from all
+</FilesMatch>

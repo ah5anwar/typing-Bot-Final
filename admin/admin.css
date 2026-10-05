@@ -1,0 +1,82 @@
+/* ============================================================
+   আমি প্রবাসী.bd — Admin Panel Design System
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap');
+
+/* Page body */
+body { font-family: 'Hind Siliguri', 'Segoe UI', sans-serif; background: #F8FAFF; }
+
+/* ── Stat Cards ── */
+.stat-card { border-radius: 14px; border: none; box-shadow: 0 2px 12px rgba(0,0,0,.07); }
+
+/* ── Tables ── */
+.table thead th {
+    background: #1E1B4B;
+    color: rgba(255,255,255,.85);
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    border: none;
+}
+.table tbody tr:hover { background: #EEF2FF; }
+
+/* ── Cards ── */
+.card { border-radius: 12px; border: 1px solid #E5E7EB; box-shadow: 0 1px 6px rgba(0,0,0,.06); }
+.card-header { border-radius: 12px 12px 0 0 !important; font-weight: 600; }
+
+/* ── Buttons ── */
+.btn { border-radius: 8px; font-weight: 500; }
+.btn-primary { background: linear-gradient(135deg, #6366F1, #0EA5E9); border: none; }
+.btn-primary:hover { background: linear-gradient(135deg, #4F46E5, #0284C7); border: none; }
+.btn-success { background: linear-gradient(135deg, #10B981, #059669); border: none; }
+.btn-success:hover { background: linear-gradient(135deg, #059669, #047857); border: none; }
+.btn-warning { background: linear-gradient(135deg, #F59E0B, #F97316); border: none; color: #fff; }
+.btn-warning:hover { color: #fff; }
+.btn-danger { background: linear-gradient(135deg, #EF4444, #DC2626); border: none; }
+.btn-danger:hover { background: linear-gradient(135deg, #DC2626, #B91C1C); border: none; }
+.btn-info { background: linear-gradient(135deg, #06B6D4, #0EA5E9); border: none; color: #fff; }
+.btn-info:hover { color: #fff; }
+
+/* ── Forms ── */
+.form-control:focus, .form-select:focus {
+    border-color: #6366F1;
+    box-shadow: 0 0 0 3px rgba(99,102,241,.15);
+}
+
+/* ── Badges ── */
+.bg-primary { background: linear-gradient(135deg, #6366F1, #0EA5E9) !important; }
+.bg-success  { background: linear-gradient(135deg, #10B981, #059669) !important; }
+.bg-warning  { background: linear-gradient(135deg, #F59E0B, #F97316) !important; }
+.bg-danger   { background: linear-gradient(135deg, #EF4444, #DC2626) !important; }
+.bg-info     { background: linear-gradient(135deg, #06B6D4, #0EA5E9) !important; }
+
+/* ── Modals ── */
+.modal-content { border-radius: 14px; border: none; box-shadow: 0 20px 60px rgba(0,0,0,.15); }
+.modal-header  { background: linear-gradient(135deg, #0F172A, #1E1B4B); color: #fff; border: none; border-radius: 14px 14px 0 0; }
+.modal-header h5, .modal-header .modal-title { color: #fff; }
+.modal-header .btn-close { filter: invert(1) opacity(.7); }
+
+/* ── Toggles ── */
+.toggle-feature { position: relative; display: inline-block; width: 42px; height: 24px; }
+.toggle-feature input { display: none; }
+.toggle-slider { position: absolute; inset: 0; background: #CBD5E1; border-radius: 24px; cursor: pointer; transition: .2s; }
+.toggle-slider::before { content: ''; position: absolute; width: 18px; height: 18px; left: 3px; bottom: 3px; background: #fff; border-radius: 50%; transition: .2s; box-shadow: 0 1px 3px rgba(0,0,0,.2); }
+.toggle-feature input:checked + .toggle-slider { background: #10B981; }
+.toggle-feature input:checked + .toggle-slider::before { transform: translateX(18px); }
+
+/* ── Progress ── */
+.progress-bar { background: linear-gradient(90deg, #6366F1, #06B6D4); }
+
+/* ── Code ── */
+code { background: #EEF2FF; color: #6366F1; padding: 2px 6px; border-radius: 4px; font-size: .82rem; }
+
+/* ── Toast ── */
+#toast > * { margin-bottom: 8px; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,.12); }
+
+/* ── Text colors ── */
+.text-primary { color: #6366F1 !important; }
+.text-success { color: #10B981 !important; }
+.text-danger  { color: #EF4444 !important; }
+.text-warning { color: #F59E0B !important; }
+.text-info    { color: #06B6D4 !important; }

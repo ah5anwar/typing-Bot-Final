@@ -1,0 +1,16 @@
+Options -Indexes
+ServerSignature Off
+
+# Security Headers
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Cache-Control "no-store, no-cache"
+</IfModule>
+
+# Block sensitive files
+<FilesMatch "\.(log|sql|sh|env|json|md)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>

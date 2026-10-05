@@ -1,0 +1,5 @@
+Options -Indexes
+<FilesMatch "\.(php|sh|sql|env)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>

@@ -1,0 +1,2 @@
+[19-Apr-2026 07:58:40 Asia/Dubai] PHP Warning:  Undefined variable $sysCurrencies in /home/creativesit/aichat.creativesit.com/admin/index.php on line 558
+[19-Apr-2026 07:58:40 Asia/Dubai] PHP Warning:  foreach() argument must be of type array|object, null given in /home/creativesit/aichat.creativesit.com/admin/index.php on line 558

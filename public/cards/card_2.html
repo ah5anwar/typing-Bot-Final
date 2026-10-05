@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: Arial, sans-serif; background: #f0f4f8; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+  .card { width: 380px; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.15); }
+  .card-header { background: linear-gradient(135deg, #1a3c6e, #2e86c1); padding: 24px; color: white; position: relative; }
+  .card-header::after { content: ""; position: absolute; bottom: -20px; left: 0; right: 0; height: 40px; background: white; border-radius: 50% 50% 0 0; }
+  .company { font-size: 13px; opacity: 0.8; margin-bottom: 4px; }
+  .card-title { font-size: 18px; font-weight: bold; }
+  .member-badge { position: absolute; top: 20px; right: 20px; background: rgba(255,255,255,0.2); padding: 6px 12px; border-radius: 20px; font-size: 11px; }
+  .card-body { padding: 30px 24px 24px; }
+  .member-info { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
+  .avatar { width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #1a3c6e, #2e86c1); display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; font-weight: bold; flex-shrink: 0; }
+  .member-name { font-size: 18px; font-weight: bold; color: #1a3c6e; }
+  .member-id { font-size: 12px; color: #888; margin-top: 2px; font-family: monospace; }
+  .member-platform { font-size: 11px; background: #e8f4f8; color: #2e86c1; padding: 2px 8px; border-radius: 10px; display: inline-block; margin-top: 4px; }
+  .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+  .info-item { background: #f8f9fa; border-radius: 10px; padding: 10px 12px; }
+  .info-label { font-size: 10px; color: #999; text-transform: uppercase; margin-bottom: 2px; }
+  .info-value { font-size: 13px; font-weight: 600; color: #333; }
+  .qr-section { display: flex; justify-content: center; padding: 16px; background: #f8f9fa; border-radius: 14px; margin-bottom: 16px; }
+  .qr-section img { width: 120px; height: 120px; }
+  .scan-text { text-align: center; font-size: 11px; color: #999; margin-top: 8px; }
+  .card-footer { background: #1a3c6e; padding: 12px 24px; display: flex; justify-content: space-between; align-items: center; }
+  .footer-text { color: rgba(255,255,255,0.7); font-size: 10px; }
+  .valid-badge { background: #27ae60; color: white; padding: 4px 10px; border-radius: 10px; font-size: 10px; font-weight: bold; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="card-header">
+    <div class="company">আমি প্রবাসী.BD</div>
+    <div class="card-title">Digital Member Card</div>
+    <div class="member-badge">MEMBER</div>
+  </div>
+  <div class="card-body">
+    <div class="member-info">
+      <div class="avatar">O</div>
+      <div>
+        <div class="member-name">Oy</div>
+        <div class="member-id">MEM-000002</div>
+        <span class="member-platform">WHATSAPP</span>
+      </div>
+    </div>
+    <div class="info-grid">
+      <div class="info-item">
+        <div class="info-label">মোবাইল</div>
+        <div class="info-value">Come to satwa</div>
+      </div>
+      <div class="info-item">
+        <div class="info-label">যোগদান</div>
+        <div class="info-value">18/04/2026</div>
+      </div>
+      <div class="info-item">
+        <div class="info-label">Member ID</div>
+        <div class="info-value">MEM-000002</div>
+      </div>
+      <div class="info-item">
+        <div class="info-label">প্ল্যাটফর্ম</div>
+        <div class="info-value">WHATSAPP</div>
+      </div>
+    </div>
+    <div class="qr-section">
+      <div>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsAQMAAABDsxw2AAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAACLklEQVRoge2a0XXrMAxDtZlGE0fTKN5ELwRAO5HdvrbfkBMfJ7r9gQmC6XFrP1tjYUUb8bqM8bqYfbbGd+fuYeyGBdQLvZNfyXWeZ+52Yw8YVaXMkRw1nafA09g3GAoTB2RNdhr7PwZPZ22O3CAyjX2N0c4jzj9gE+yUd3O9scKWfHwds18Hd43dsFrZ/3RG/1sUeV/GapvBARcHY5cWRoBA3mnsCdOQAjsHVc6KTFEhMlQ2tmGqybUKGZKWLybvYewBQ4KMoiQvhV1U2dgNw3zCwK0X6/DUeOnnmLF37GMNtkN0QH6DKJnN2I4pPpAdgY9Rwbsw6y3Y2dgNU3KsKBHRBhvNLEMbu2OjkoNQnMXYWZ591V0wdmEVHILzwzyJa1I2tmEsS+yXsbMahbbrLhj7E5bqB+4GkFCfbCLyshu7Y6Fo0Xijfslp5uqcxjYMsobIJW5qIDxPxh6wkLw1Tc8+ZWepix8pxj6wy84qTMaKIuajKI29Y5R0KaJD7fCl6xTW3/45b+zEFvWFxCBSYCCqSXZLYxsWVZxMj/xCnY9owoexB4wFuSo+Gg3d1AbLzsY2bJxuhtYDCMoxQbCHsR2rBSezNpm6ig62Q2M7xu2qSV72c1/HYeyGRbkVBMqyL2raRS9jDxh0jaH8SHWnUgOLndDYV1ilx1hkOK/A18a+x4IfrjFFbfL9YR5jhdHO6WMUpuaU3JW8xp4wmpZlmW6+P033+TCPsd9gP1v/AL3iVpvmorFnAAAAAElFTkSuQmCC" alt="QR Code">
+        <div class="scan-text">স্ক্যান করে সব তথ্য দেখুন</div>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <div class="footer-text">আমি প্রবাসী.BD | 2026</div>
+    <div class="valid-badge">✓ VALID</div>
+  </div>
+</div>
+</body>
+</html>
